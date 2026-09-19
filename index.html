@@ -1,4 +1,4 @@
-```
+```html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
@@ -23,7 +23,12 @@
     <!-- رنگ مرورگر موبایل -->
     <meta name="theme-color" content="#0d1117">
 
-    <link rel="preload" as="image" href="photo_5870748148337152475_y.jpg" fetchpriority="high">
+    <link
+        rel="preload"
+        as="image"
+        href="photo_5870748148337152475_y.jpg"
+        fetchpriority="high"
+    >
 
     <!-- فونت فارسی -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +38,6 @@
         href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet"
     >
-
 
     <style>
 
@@ -82,7 +86,6 @@
 
         :root {
 
-            /* رنگ‌های اصلی */
             --accent: #6c5ce7;
             --accent-2: #8b7cf6;
             --accent-soft: rgba(108, 92, 231, .10);
@@ -90,7 +93,6 @@
             --green: #26c86f;
             --yellow: #f4bd42;
 
-            /* حالت روشن */
             --bg: #f5f6fa;
             --bg-2: #ffffff;
 
@@ -103,14 +105,12 @@
 
             --border: rgba(20, 25, 35, .08);
 
-            /* سایه */
             --shadow:
                 0 20px 60px rgba(20, 25, 35, .08);
 
             --shadow-small:
                 0 8px 25px rgba(20, 25, 35, .06);
 
-            /* گردی */
             --radius-xl: 30px;
             --radius-lg: 22px;
             --radius-md: 16px;
@@ -121,7 +121,6 @@
 
         /* =========================================================
            DARK THEME
-           با افزودن data-theme="dark" به html فعال می‌شود
            ========================================================= */
 
         html[data-theme="dark"] {
@@ -189,9 +188,7 @@
             top: 0;
             z-index: 1000;
 
-            padding:
-                12px
-                0;
+            padding: 12px 0;
 
             background:
                 color-mix(
@@ -294,7 +291,6 @@
             height: 18px;
         }
 
-        /* آیکون ماه/خورشید */
         #sunIcon {
             display: none;
         }
@@ -342,8 +338,6 @@
             padding: 28px;
         }
 
-
-        /* دکورهای SVG/گرادیانی پس‌زمینه */
 
         .hero-decoration {
 
@@ -413,7 +407,6 @@
 
         /* =========================================================
            APP ICON
-           SVG داخل خود صفحه
            ========================================================= */
 
         .app-icon {
@@ -437,12 +430,14 @@
                 );
         }
 
-        .app-icon svg {
+        .app-icon img {
 
             width: 100%;
             height: 100%;
 
             display: block;
+
+            object-fit: cover;
         }
 
 
@@ -632,7 +627,9 @@
         }
 
 
-        /* دکمه دانلود */
+        /* =========================================================
+           DOWNLOAD BUTTON
+           ========================================================= */
 
         .download-button {
 
@@ -935,7 +932,6 @@
            ========================================================= */
 
         .screenshots-section {
-
             margin-top: 18px;
         }
 
@@ -989,6 +985,11 @@
             transform: scale(1.035);
         }
 
+
+        /* =========================================================
+           COMMENTS
+           ========================================================= */
+
         .comments-section {
             margin-top: 18px;
         }
@@ -1000,73 +1001,114 @@
         }
 
         .comment-fields {
+
             display: grid;
-            grid-template-columns: 180px 1fr;
+
+            grid-template-columns:
+                180px 1fr;
+
             gap: 10px;
         }
 
         .comment-input,
         .comment-textarea {
+
             width: 100%;
-            border: 1px solid var(--border);
+
+            border:
+                1px solid var(--border);
+
             border-radius: 12px;
+
             padding: 11px 12px;
+
             background: var(--surface-solid);
+
             color: var(--text);
+
             font: inherit;
             font-size: 11px;
+
             outline: none;
         }
 
         .comment-textarea {
+
             min-height: 82px;
+
             resize: vertical;
         }
 
         .comment-input:focus,
         .comment-textarea:focus {
-            border-color: var(--accent);
+
+            border-color:
+                var(--accent);
         }
 
         .comment-actions {
+
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
+
             gap: 12px;
         }
 
         .comment-rating {
+
             display: flex;
-            flex-direction: row-reverse;
+
+            flex-direction:
+                row-reverse;
+
             gap: 3px;
         }
 
         .comment-rating input {
+
             position: absolute;
+
             opacity: 0;
         }
 
         .comment-rating label {
+
             color: var(--text-3);
+
             cursor: pointer;
+
             font-size: 22px;
         }
 
         .comment-rating label:hover,
         .comment-rating label:hover ~ label,
         .comment-rating input:checked ~ label {
+
             color: var(--yellow);
         }
 
         .comment-submit {
+
             min-height: 42px;
+
             padding: 0 18px;
+
             border-radius: 12px;
+
             color: white;
-            background: var(--accent);
+
+            background:
+                var(--accent);
+
             font: inherit;
+
             font-size: 11px;
+
             font-weight: 800;
+
             cursor: pointer;
         }
 
@@ -1075,87 +1117,162 @@
         }
 
         .comment-item {
+
             padding: 13px;
-            border: 1px solid var(--border);
+
+            border:
+                1px solid var(--border);
+
             border-radius: 14px;
-            background: var(--surface-solid);
+
+            background:
+                var(--surface-solid);
         }
 
         .comment-meta {
+
             display: flex;
-            justify-content: space-between;
+
+            justify-content:
+                space-between;
+
             gap: 10px;
+
             color: var(--text-3);
+
             font-size: 9px;
         }
 
         .comment-name {
+
             color: var(--text);
+
             font-weight: 900;
         }
 
         .comment-stars {
+
             color: var(--yellow);
+
             letter-spacing: 1px;
         }
 
         .comment-body {
+
             margin-top: 7px;
+
             color: var(--text-2);
+
             font-size: 10px;
+
             line-height: 1.9;
         }
 
+
+        /* =========================================================
+           LIGHTBOX
+           ========================================================= */
+
         .lightbox {
+
             position: fixed;
+
             inset: 0;
+
             z-index: 10000;
+
             display: grid;
+
             place-items: center;
+
             padding: 18px;
-            background: rgba(3, 5, 10, .88);
+
+            background:
+                rgba(3, 5, 10, .88);
+
             opacity: 0;
+
             visibility: hidden;
+
             pointer-events: none;
-            transition: opacity .2s ease, visibility .2s ease;
+
+            transition:
+                opacity .2s ease,
+                visibility .2s ease;
         }
 
         .lightbox.show {
+
             opacity: 1;
+
             visibility: visible;
+
             pointer-events: auto;
         }
 
         .lightbox-image {
-            max-width: min(100%, 980px);
-            max-height: calc(100vh - 70px);
+
+            max-width:
+                min(100%, 980px);
+
+            max-height:
+                calc(100vh - 70px);
+
             object-fit: contain;
+
             border-radius: 16px;
-            box-shadow: 0 20px 70px rgba(0, 0, 0, .45);
+
+            box-shadow:
+                0 20px 70px
+                rgba(0, 0, 0, .45);
         }
 
         .lightbox-close {
+
             position: absolute;
-            top: max(14px, env(safe-area-inset-top));
-            right: max(14px, env(safe-area-inset-right));
+
+            top:
+                max(14px, env(safe-area-inset-top));
+
+            right:
+                max(14px, env(safe-area-inset-right));
+
             width: 42px;
             height: 42px;
-            border: 1px solid rgba(255, 255, 255, .2);
+
+            border:
+                1px solid rgba(255, 255, 255, .2);
+
             border-radius: 50%;
+
             color: white;
-            background: rgba(255, 255, 255, .12);
+
+            background:
+                rgba(255, 255, 255, .12);
+
             font-size: 25px;
+
             line-height: 1;
+
             cursor: pointer;
         }
 
         .lightbox-caption {
+
             position: absolute;
+
             right: 18px;
-            bottom: max(14px, env(safe-area-inset-bottom));
+
+            bottom:
+                max(14px, env(safe-area-inset-bottom));
+
             left: 18px;
-            color: rgba(255, 255, 255, .82);
+
+            color:
+                rgba(255, 255, 255, .82);
+
             text-align: center;
+
             font-size: 11px;
         }
 
@@ -1195,6 +1312,7 @@
             pointer-events: none;
 
             display: flex;
+
             align-items: center;
 
             gap: 7px;
@@ -1203,16 +1321,20 @@
 
             border-radius: 12px;
 
-            background: var(--surface-solid);
+            background:
+                var(--surface-solid);
 
             border:
                 1px solid var(--border);
 
-            box-shadow: var(--shadow);
+            box-shadow:
+                var(--shadow);
 
-            color: var(--text);
+            color:
+                var(--text);
 
             font-size: 10px;
+
             font-weight: 800;
 
             transition: .3s ease;
@@ -1233,7 +1355,8 @@
             width: 15px;
             height: 15px;
 
-            color: var(--green);
+            color:
+                var(--green);
         }
 
 
@@ -1244,7 +1367,8 @@
         @media (max-width: 760px) {
 
             .page {
-                width: min(100% - 14px, 1040px);
+                width:
+                    min(100% - 14px, 1040px);
             }
 
             main {
@@ -1252,19 +1376,21 @@
             }
 
             .hero-card {
+
                 padding: 18px;
+
                 border-radius: 23px;
             }
 
             .app-header {
 
                 grid-template-columns:
-                    78px
-                    1fr;
+                    78px 1fr;
 
                 gap: 14px;
 
-                align-items: start;
+                align-items:
+                    start;
             }
 
             .app-icon {
@@ -1284,7 +1410,9 @@
             }
 
             .rating-line {
+
                 margin-top: 6px;
+
                 gap: 6px;
             }
 
@@ -1293,6 +1421,7 @@
             }
 
             .stars svg {
+
                 width: 11px;
                 height: 11px;
             }
@@ -1306,14 +1435,19 @@
             }
 
             .download-panel {
+
                 margin-top: 20px;
+
                 padding: 14px;
             }
 
             .download-symbol {
+
                 width: 37px;
                 height: 37px;
-                flex-basis: 37px;
+
+                flex-basis:
+                    37px;
             }
 
             .download-title {
@@ -1329,18 +1463,25 @@
             }
 
             .download-button {
+
                 min-height: 50px;
+
                 font-size: 12px;
+
                 border-radius: 13px;
             }
 
             .quick-stats {
+
                 gap: 7px;
+
                 margin-top: 12px;
             }
 
             .quick-stat {
-                padding: 11px 8px;
+
+                padding:
+                    11px 8px;
             }
 
             .stat-label {
@@ -1352,12 +1493,17 @@
             }
 
             .content-grid {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
+
                 gap: 12px;
             }
 
             .content-card {
+
                 padding: 18px;
+
                 border-radius: 18px;
             }
 
@@ -1378,16 +1524,24 @@
             }
 
             .screenshots {
-                grid-template-columns: 1fr 1fr;
+
+                grid-template-columns:
+                    1fr 1fr;
             }
 
             .comment-fields {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
             }
 
             .comment-actions {
-                align-items: stretch;
-                flex-direction: column;
+
+                align-items:
+                    stretch;
+
+                flex-direction:
+                    column;
             }
 
             .comment-submit {
@@ -1403,7 +1557,8 @@
         @media (max-width: 380px) {
 
             .page {
-                width: calc(100% - 10px);
+                width:
+                    calc(100% - 10px);
             }
 
             .hero-card {
@@ -1411,13 +1566,18 @@
             }
 
             .app-header {
-                grid-template-columns: 67px 1fr;
+
+                grid-template-columns:
+                    67px 1fr;
+
                 gap: 11px;
             }
 
             .app-icon {
+
                 width: 67px;
                 height: 67px;
+
                 border-radius: 18px;
             }
 
@@ -1426,15 +1586,21 @@
             }
 
             .quick-stats {
-                grid-template-columns: 1fr 1fr;
+
+                grid-template-columns:
+                    1fr 1fr;
             }
 
             .info-list {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
             }
 
             .screenshots {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
             }
 
             .lightbox {
@@ -1442,7 +1608,10 @@
             }
 
             .lightbox-image {
-                max-height: calc(100vh - 90px);
+
+                max-height:
+                    calc(100vh - 90px);
+
                 border-radius: 11px;
             }
         }
@@ -1450,7 +1619,6 @@
 
         /* =========================================================
            REDUCED MOTION
-           برای کاربرانی که انیمیشن کمتر می‌خواهند
            ========================================================= */
 
         @media (prefers-reduced-motion: reduce) {
@@ -1459,12 +1627,17 @@
             *::before,
             *::after {
 
-                animation-duration: .01ms !important;
-                animation-iteration-count: 1 !important;
+                animation-duration:
+                    .01ms !important;
 
-                scroll-behavior: auto !important;
+                animation-iteration-count:
+                    1 !important;
 
-                transition-duration: .01ms !important;
+                scroll-behavior:
+                    auto !important;
+
+                transition-duration:
+                    .01ms !important;
             }
         }
 
@@ -1482,7 +1655,6 @@
 
         <div class="page header-inner">
 
-            <!-- لوگوی ساده SVG -->
             <div class="brand">
 
                 <div class="brand-mark">
@@ -1514,7 +1686,6 @@
             </div>
 
 
-            <!-- دکمه تغییر حالت -->
             <button
                 class="theme-button"
                 id="themeButton"
@@ -1522,7 +1693,6 @@
                 type="button"
             >
 
-                <!-- ماه -->
                 <svg
                     id="moonIcon"
                     viewBox="0 0 24 24"
@@ -1539,7 +1709,6 @@
                 </svg>
 
 
-                <!-- خورشید -->
                 <svg
                     id="sunIcon"
                     viewBox="0 0 24 24"
@@ -1583,47 +1752,44 @@
 
             <section class="hero-card">
 
-                <!-- دکورهای صفحه -->
                 <div class="hero-decoration"></div>
                 <div class="hero-decoration-2"></div>
 
 
-                <!-- =================================================
-                     APP INFORMATION
-                     ================================================= -->
+                <!-- APP INFORMATION -->
 
                 <div class="app-header">
 
 
-                    <!-- =================================================
-                        APP ICON
-                        ================================================= -->
+                    <!-- APP ICON -->
 
                     <div class="app-icon">
-                        <img src="photo_5870748148337152475_y.jpg" alt="لوگوی دوست یابی HM" width="120" height="120" fetchpriority="high">
+
+                        <img
+                            src="photo_5870748148337152475_y.jpg"
+                            alt="لوگوی دوست یابی HM"
+                            width="120"
+                            height="120"
+                            fetchpriority="high"
+                        >
 
                     </div>
 
 
-                    <!-- =================================================
-                         TEXT
-                         ================================================= -->
+                    <!-- TEXT -->
 
                     <div>
 
-                        <!-- نام برنامه -->
                         <h1 class="app-title">
                             دوست یابی HM
                         </h1>
 
 
-                        <!-- توسعه‌دهنده -->
                         <div class="app-developer">
                             برنامه آشنایی و پیدا کردن دوست‌های جدید
                         </div>
 
 
-                        <!-- امتیاز -->
                         <div class="rating-line">
 
                             <span class="rating-number">
@@ -1633,27 +1799,22 @@
 
                             <span class="stars">
 
-                                <!-- ستاره 1 -->
                                 <svg viewBox="0 0 24 24">
                                     <path d="M12 2.5l2.95 5.98 6.6.96-4.78 4.66 1.13 6.57L12 17.56l-5.9 3.11 1.13-6.57-4.78-4.66 6.6-.96L12 2.5z"/>
                                 </svg>
 
-                                <!-- ستاره 2 -->
                                 <svg viewBox="0 0 24 24">
                                     <path d="M12 2.5l2.95 5.98 6.6.96-4.78 4.66 1.13 6.57L12 17.56l-5.9 3.11 1.13-6.57-4.78-4.66 6.6-.96L12 2.5z"/>
                                 </svg>
 
-                                <!-- ستاره 3 -->
                                 <svg viewBox="0 0 24 24">
                                     <path d="M12 2.5l2.95 5.98 6.6.96-4.78 4.66 1.13 6.57L12 17.56l-5.9 3.11 1.13-6.57-4.78-4.66 6.6-.96L12 2.5z"/>
                                 </svg>
 
-                                <!-- ستاره 4 -->
                                 <svg viewBox="0 0 24 24">
                                     <path d="M12 2.5l2.95 5.98 6.6.96-4.78 4.66 1.13 6.57L12 17.56l-5.9 3.11 1.13-6.57-4.78-4.66 6.6-.96L12 2.5z"/>
                                 </svg>
 
-                                <!-- ستاره 5 -->
                                 <svg viewBox="0 0 24 24">
                                     <path d="M12 2.5l2.95 5.98 6.6.96-4.78 4.66 1.13 6.57L12 17.56l-5.9 3.11 1.13-6.57-4.78-4.66 6.6-.96L12 2.5z"/>
                                 </svg>
@@ -1666,7 +1827,6 @@
                             </span>
 
 
-                            <!-- برچسب -->
                             <span class="pill">
 
                                 <svg
@@ -1691,16 +1851,12 @@
                 </div>
 
 
-                <!-- =================================================
-                     DOWNLOAD PANEL
-                     ================================================= -->
+                <!-- DOWNLOAD PANEL -->
 
                 <div class="download-panel">
 
                     <div class="download-row">
 
-
-                        <!-- اطلاعات فایل -->
 
                         <div class="download-info">
 
@@ -1737,7 +1893,6 @@
                         </div>
 
 
-                        <!-- حجم فایل -->
                         <div class="file-size">
                             25.4 MB
                         </div>
@@ -1746,17 +1901,17 @@
 
 
                     <!-- =================================================
-                         دکمه دانلود
-                         مهم:
-                         فایل دانلود باید کنار همین HTML با نام HM.apk باشد.
+                         لینک واقعی APK
+                         فایل HM.APK باید دقیقاً کنار index.html باشد.
                          ================================================= -->
 
                     <a
-                        href="HM.apk"
-                        download="HM.apk"
+                        href="./HM.APK"
+                        download="HM.APK"
                         type="application/vnd.android.package-archive"
                         class="download-button"
                         id="downloadButton"
+                        aria-label="دانلود و نصب برنامه HM"
                     >
 
                         <svg
@@ -1779,12 +1934,9 @@
                 </div>
 
 
-                <!-- =================================================
-                     QUICK STATS
-                     ================================================= -->
+                <!-- QUICK STATS -->
 
                 <div class="quick-stats">
-
 
                     <div class="quick-stat">
 
@@ -1849,10 +2001,6 @@
             <div class="content-grid">
 
 
-                <!-- =================================================
-                     ABOUT
-                     ================================================= -->
-
                 <section class="content-card">
 
                     <h2 class="section-title">
@@ -1876,10 +2024,6 @@
 
                 </section>
 
-
-                <!-- =================================================
-                     CHANGELOG
-                     ================================================= -->
 
                 <section class="content-card">
 
@@ -1931,8 +2075,6 @@
                 <div class="info-list">
 
 
-                    <!-- سیستم‌عامل -->
-
                     <div class="info-item">
 
                         <div class="info-icon">
@@ -1974,8 +2116,6 @@
                     </div>
 
 
-                    <!-- نسخه -->
-
                     <div class="info-item">
 
                         <div class="info-icon">
@@ -2014,8 +2154,6 @@
                     </div>
 
 
-                    <!-- حجم -->
-
                     <div class="info-item">
 
                         <div class="info-icon">
@@ -2050,8 +2188,6 @@
 
                     </div>
 
-
-                    <!-- آخرین بروزرسانی -->
 
                     <div class="info-item">
 
@@ -2088,8 +2224,6 @@
                     </div>
 
 
-                    <!-- نوع فایل -->
-
                     <div class="info-item">
 
                         <div class="info-icon">
@@ -2125,8 +2259,6 @@
 
                     </div>
 
-
-                    <!-- نصب -->
 
                     <div class="info-item">
 
@@ -2174,40 +2306,146 @@
             <section class="content-card comments-section">
 
                 <h2 class="section-title">
+
                     <span class="section-title-dot"></span>
+
                     نظر کاربران
+
                 </h2>
 
-                <form class="comment-form" id="commentForm">
+
+                <form
+                    class="comment-form"
+                    id="commentForm"
+                >
+
                     <div class="comment-fields">
-                        <input class="comment-input" id="commentName" maxlength="40" required placeholder="نام شما" aria-label="نام شما">
-                        <textarea class="comment-textarea" id="commentText" maxlength="500" required placeholder="نظر خود را درباره برنامه بنویسید..." aria-label="نظر شما"></textarea>
+
+                        <input
+                            class="comment-input"
+                            id="commentName"
+                            maxlength="40"
+                            required
+                            placeholder="نام شما"
+                            aria-label="نام شما"
+                        >
+
+                        <textarea
+                            class="comment-textarea"
+                            id="commentText"
+                            maxlength="500"
+                            required
+                            placeholder="نظر خود را درباره برنامه بنویسید..."
+                            aria-label="نظر شما"
+                        ></textarea>
+
                     </div>
+
 
                     <div class="comment-actions">
-                        <div class="comment-rating" aria-label="امتیاز برنامه">
-                            <input id="star5" name="rating" type="radio" value="5" checked><label for="star5" title="۵ ستاره">★</label>
-                            <input id="star4" name="rating" type="radio" value="4"><label for="star4" title="۴ ستاره">★</label>
-                            <input id="star3" name="rating" type="radio" value="3"><label for="star3" title="۳ ستاره">★</label>
-                            <input id="star2" name="rating" type="radio" value="2"><label for="star2" title="۲ ستاره">★</label>
-                            <input id="star1" name="rating" type="radio" value="1"><label for="star1" title="۱ ستاره">★</label>
+
+                        <div
+                            class="comment-rating"
+                            aria-label="امتیاز برنامه"
+                        >
+
+                            <input
+                                id="star5"
+                                name="rating"
+                                type="radio"
+                                value="5"
+                                checked
+                            >
+
+                            <label
+                                for="star5"
+                                title="۵ ستاره"
+                            >
+                                ★
+                            </label>
+
+                            <input
+                                id="star4"
+                                name="rating"
+                                type="radio"
+                                value="4"
+                            >
+
+                            <label
+                                for="star4"
+                                title="۴ ستاره"
+                            >
+                                ★
+                            </label>
+
+                            <input
+                                id="star3"
+                                name="rating"
+                                type="radio"
+                                value="3"
+                            >
+
+                            <label
+                                for="star3"
+                                title="۳ ستاره"
+                            >
+                                ★
+                            </label>
+
+                            <input
+                                id="star2"
+                                name="rating"
+                                type="radio"
+                                value="2"
+                            >
+
+                            <label
+                                for="star2"
+                                title="۲ ستاره"
+                            >
+                                ★
+                            </label>
+
+                            <input
+                                id="star1"
+                                name="rating"
+                                type="radio"
+                                value="1"
+                            >
+
+                            <label
+                                for="star1"
+                                title="۱ ستاره"
+                            >
+                                ★
+                            </label>
+
                         </div>
-                        <button class="comment-submit" type="submit">ثبت نظر</button>
+
+
+                        <button
+                            class="comment-submit"
+                            type="submit"
+                        >
+                            ثبت نظر
+                        </button>
+
                     </div>
+
                 </form>
 
-                <div class="comment-list" id="commentList" aria-live="polite"></div>
+
+                <div
+                    class="comment-list"
+                    id="commentList"
+                    aria-live="polite"
+                ></div>
 
             </section>
 
 
             <!-- =====================================================
                  SCREENSHOTS
-
-                 برای اضافه کردن عکس:
-                 تصاویر واقعی برنامه HM
-
-                 اگر عکس نداری، می‌توانی کل این بخش را حذف کنی.
                  ===================================================== -->
 
             <section class="content-card screenshots-section">
@@ -2234,16 +2472,40 @@
 
                     </div>
 
-                    <div class="screenshot">
-                        <img src="photo_5870566071788572804_y.jpg" alt="تصویر برنامه - 2" loading="lazy" decoding="async">
-                    </div>
 
                     <div class="screenshot">
-                        <img src="photo_5870566071788572805_y.jpg" alt="تصویر برنامه - 3" loading="lazy" decoding="async">
+
+                        <img
+                            src="photo_5870566071788572804_y.jpg"
+                            alt="تصویر برنامه - 2"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
                     </div>
 
+
                     <div class="screenshot">
-                        <img src="photo_5870566071788572806_y.jpg" alt="تصویر برنامه - 4" loading="lazy" decoding="async">
+
+                        <img
+                            src="photo_5870566071788572805_y.jpg"
+                            alt="تصویر برنامه - 3"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                    </div>
+
+
+                    <div class="screenshot">
+
+                        <img
+                            src="photo_5870566071788572806_y.jpg"
+                            alt="تصویر برنامه - 4"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
                     </div>
 
 
@@ -2251,7 +2513,7 @@
 
                         <img
                             src="photo_5870566071788572807_y.jpg"
-                            alt="تصویر برنامه - 2"
+                            alt="تصویر برنامه - 5"
                             loading="lazy"
                         >
 
@@ -2262,18 +2524,34 @@
 
                         <img
                             src="photo_5870566071788572808_y.jpg"
-                            alt="تصویر برنامه - 3"
+                            alt="تصویر برنامه - 6"
                             loading="lazy"
                         >
 
                     </div>
 
-                    <div class="screenshot">
-                        <img src="photo_5870566071788572809_y.jpg" alt="تصویر برنامه - 7" loading="lazy" decoding="async">
-                    </div>
 
                     <div class="screenshot">
-                        <img src="photo_5870566071788572810_y.jpg" alt="تصویر برنامه - 8" loading="lazy" decoding="async">
+
+                        <img
+                            src="photo_5870566071788572809_y.jpg"
+                            alt="تصویر برنامه - 7"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                    </div>
+
+
+                    <div class="screenshot">
+
+                        <img
+                            src="photo_5870566071788572810_y.jpg"
+                            alt="تصویر برنامه - 8"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
                     </div>
 
                 </div>
@@ -2319,10 +2597,38 @@
     </div>
 
 
-    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="نمایش تصویر">
-        <button class="lightbox-close" id="lightboxClose" type="button" aria-label="بستن تصویر">×</button>
-        <img class="lightbox-image" id="lightboxImage" alt="">
-        <div class="lightbox-caption" id="lightboxCaption"></div>
+    <!-- =========================================================
+         LIGHTBOX
+         ========================================================= -->
+
+    <div
+        class="lightbox"
+        id="lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="نمایش تصویر"
+    >
+
+        <button
+            class="lightbox-close"
+            id="lightboxClose"
+            type="button"
+            aria-label="بستن تصویر"
+        >
+            ×
+        </button>
+
+        <img
+            class="lightbox-image"
+            id="lightboxImage"
+            alt=""
+        >
+
+        <div
+            class="lightbox-caption"
+            id="lightboxCaption"
+        ></div>
+
     </div>
 
 
@@ -2342,18 +2648,11 @@
             document.getElementById("themeButton");
 
 
-        /* ---------------------------------------------------------
-           تشخیص تم ذخیره شده
-           --------------------------------------------------------- */
-
         const savedTheme =
-            localStorage.getItem("download-page-theme");
+            localStorage.getItem(
+                "download-page-theme"
+            );
 
-
-        /* ---------------------------------------------------------
-           اگر کاربر قبلاً انتخاب کرده باشد، همان را استفاده می‌کنیم.
-           در غیر این صورت تم سیستم عامل را بررسی می‌کنیم.
-           --------------------------------------------------------- */
 
         if (savedTheme === "dark") {
 
@@ -2389,17 +2688,14 @@
         }
 
 
-        /* ---------------------------------------------------------
-           کلیک روی دکمه تغییر تم
-           --------------------------------------------------------- */
-
         themeButton.addEventListener(
             "click",
             () => {
 
                 const dark =
-                    html.getAttribute("data-theme")
-                    === "dark";
+                    html.getAttribute(
+                        "data-theme"
+                    ) === "dark";
 
 
                 if (dark) {
@@ -2442,7 +2738,9 @@
             );
 
         const toast =
-            document.getElementById("toast");
+            document.getElementById(
+                "toast"
+            );
 
 
         let toastTimer;
@@ -2452,7 +2750,12 @@
             "click",
             () => {
 
-                toast.classList.add("show");
+                toast.textContent =
+                    "دانلود شروع شد...";
+
+                toast.classList.add(
+                    "show"
+                );
 
 
                 clearTimeout(
@@ -2480,55 +2783,202 @@
            LOCAL COMMENTS
            ========================================================= */
 
-        const commentForm = document.getElementById("commentForm");
-        const commentList = document.getElementById("commentList");
-        const commentStorageKey = "hm-app-comments";
+        const commentForm =
+            document.getElementById(
+                "commentForm"
+            );
+
+        const commentList =
+            document.getElementById(
+                "commentList"
+            );
+
+        const commentStorageKey =
+            "hm-app-comments";
+
+
         const defaultComments = [
-            { name: "سارا", text: "طراحی برنامه خیلی قشنگه، پیدا کردن آدم‌های هم‌سلیقه هم راحت شده.", rating: 5 },
-            { name: "مهدی", text: "فضای برنامه صمیمی و سریع است. بخش چت را خیلی دوست داشتم.", rating: 5 },
-            { name: "نگار", text: "پروفایل‌ها مرتب هستند و ایده علاقه‌مندی‌ها برای شروع گفتگو عالیه.", rating: 4 }
+
+            {
+                name: "سارا",
+                text: "طراحی برنامه خیلی قشنگه، پیدا کردن آدم‌های هم‌سلیقه هم راحت شده.",
+                rating: 5
+            },
+
+            {
+                name: "مهدی",
+                text: "فضای برنامه صمیمی و سریع است. بخش چت را خیلی دوست داشتم.",
+                rating: 5
+            },
+
+            {
+                name: "نگار",
+                text: "پروفایل‌ها مرتب هستند و ایده علاقه‌مندی‌ها برای شروع گفتگو عالیه.",
+                rating: 4
+            }
+
         ];
 
-        const escapeHtml = (value) => value.replace(/[&<>'"]/g, (character) => ({
-            "&": "&amp;",
-            "<": "&lt;",
-            ">": "&gt;",
-            "'": "&#039;",
-            '"': "&quot;"
-        }[character]));
 
-        const renderComments = () => {
-            const savedComments = JSON.parse(localStorage.getItem(commentStorageKey) || "[]");
-            const comments = savedComments.length ? savedComments : defaultComments;
-            commentList.innerHTML = comments.map((comment) => `
-                <article class="comment-item">
-                    <div class="comment-meta">
-                        <span class="comment-name">${escapeHtml(comment.name)}</span>
-                        <span class="comment-stars">${"★".repeat(comment.rating)}${"☆".repeat(5 - comment.rating)}</span>
-                    </div>
-                    <p class="comment-body">${escapeHtml(comment.text)}</p>
-                </article>
-            `).join("");
-        };
+        const escapeHtml =
+            (value) => value.replace(
+                /[&<>'"]/g,
+                (character) => ({
 
-        commentForm.addEventListener("submit", (event) => {
-            event.preventDefault();
-            const comments = JSON.parse(localStorage.getItem(commentStorageKey) || "[]");
-            const formData = new FormData(commentForm);
-            comments.unshift({
-                name: document.getElementById("commentName").value.trim(),
-                text: document.getElementById("commentText").value.trim(),
-                rating: Number(formData.get("rating"))
-            });
-            localStorage.setItem(commentStorageKey, JSON.stringify(comments.slice(0, 20)));
-            commentForm.reset();
-            document.getElementById("star5").checked = true;
-            renderComments();
-            toast.textContent = "نظر شما ثبت شد";
-            toast.classList.add("show");
-            clearTimeout(toastTimer);
-            toastTimer = setTimeout(() => toast.classList.remove("show"), 2200);
-        });
+                    "&": "&amp;",
+                    "<": "&lt;",
+                    ">": "&gt;",
+                    "'": "&#039;",
+                    '"': "&quot;"
+
+                }[character])
+            );
+
+
+        const renderComments =
+            () => {
+
+                const savedComments =
+                    JSON.parse(
+                        localStorage.getItem(
+                            commentStorageKey
+                        ) || "[]"
+                    );
+
+
+                const comments =
+                    savedComments.length
+                        ? savedComments
+                        : defaultComments;
+
+
+                commentList.innerHTML =
+                    comments.map(
+                        (comment) => `
+
+                            <article class="comment-item">
+
+                                <div class="comment-meta">
+
+                                    <span class="comment-name">
+                                        ${escapeHtml(comment.name)}
+                                    </span>
+
+                                    <span class="comment-stars">
+                                        ${"★".repeat(comment.rating)}
+                                        ${"☆".repeat(5 - comment.rating)}
+                                    </span>
+
+                                </div>
+
+                                <p class="comment-body">
+                                    ${escapeHtml(comment.text)}
+                                </p>
+
+                            </article>
+
+                        `
+                    ).join("");
+
+            };
+
+
+        commentForm.addEventListener(
+            "submit",
+            (event) => {
+
+                event.preventDefault();
+
+
+                const comments =
+                    JSON.parse(
+                        localStorage.getItem(
+                            commentStorageKey
+                        ) || "[]"
+                    );
+
+
+                const formData =
+                    new FormData(
+                        commentForm
+                    );
+
+
+                comments.unshift({
+
+                    name:
+                        document
+                            .getElementById(
+                                "commentName"
+                            )
+                            .value
+                            .trim(),
+
+                    text:
+                        document
+                            .getElementById(
+                                "commentText"
+                            )
+                            .value
+                            .trim(),
+
+                    rating:
+                        Number(
+                            formData.get(
+                                "rating"
+                            )
+                        )
+
+                });
+
+
+                localStorage.setItem(
+                    commentStorageKey,
+                    JSON.stringify(
+                        comments.slice(0, 20)
+                    )
+                );
+
+
+                commentForm.reset();
+
+
+                document
+                    .getElementById(
+                        "star5"
+                    )
+                    .checked = true;
+
+
+                renderComments();
+
+
+                toast.textContent =
+                    "نظر شما ثبت شد";
+
+
+                toast.classList.add(
+                    "show"
+                );
+
+
+                clearTimeout(
+                    toastTimer
+                );
+
+
+                toastTimer =
+                    setTimeout(
+                        () =>
+                            toast.classList.remove(
+                                "show"
+                            ),
+                        2200
+                    );
+
+            }
+        );
+
 
         renderComments();
 
@@ -2537,48 +2987,129 @@
            MOBILE IMAGE VIEWER
            ========================================================= */
 
-        const lightbox = document.getElementById("lightbox");
-        const lightboxImage = document.getElementById("lightboxImage");
-        const lightboxCaption = document.getElementById("lightboxCaption");
-        const lightboxClose = document.getElementById("lightboxClose");
+        const lightbox =
+            document.getElementById(
+                "lightbox"
+            );
 
-        const closeLightbox = () => {
-            lightbox.classList.remove("show");
-            document.body.style.overflow = "";
-            lightboxImage.removeAttribute("src");
-        };
+        const lightboxImage =
+            document.getElementById(
+                "lightboxImage"
+            );
 
-        document.querySelectorAll(".screenshot img").forEach((image) => {
-            image.addEventListener("click", () => {
-                lightboxImage.src = image.currentSrc || image.src;
-                lightboxImage.alt = image.alt;
-                lightboxCaption.textContent = image.alt;
-                lightbox.classList.add("show");
-                document.body.style.overflow = "hidden";
-            });
-        });
+        const lightboxCaption =
+            document.getElementById(
+                "lightboxCaption"
+            );
 
-        lightboxClose.addEventListener("click", closeLightbox);
-        lightbox.addEventListener("click", (event) => {
-            if (event.target === lightbox) {
-                closeLightbox();
+        const lightboxClose =
+            document.getElementById(
+                "lightboxClose"
+            );
+
+
+        const closeLightbox =
+            () => {
+
+                lightbox.classList.remove(
+                    "show"
+                );
+
+                document.body.style.overflow =
+                    "";
+
+                lightboxImage.removeAttribute(
+                    "src"
+                );
+
+            };
+
+
+        document
+            .querySelectorAll(
+                ".screenshot img"
+            )
+            .forEach(
+                (image) => {
+
+                    image.addEventListener(
+                        "click",
+                        () => {
+
+                            lightboxImage.src =
+                                image.currentSrc ||
+                                image.src;
+
+                            lightboxImage.alt =
+                                image.alt;
+
+                            lightboxCaption.textContent =
+                                image.alt;
+
+                            lightbox.classList.add(
+                                "show"
+                            );
+
+                            document.body.style.overflow =
+                                "hidden";
+
+                        }
+                    );
+
+                }
+            );
+
+
+        lightboxClose.addEventListener(
+            "click",
+            closeLightbox
+        );
+
+
+        lightbox.addEventListener(
+            "click",
+            (event) => {
+
+                if (
+                    event.target ===
+                    lightbox
+                ) {
+
+                    closeLightbox();
+
+                }
+
             }
-        });
-        document.addEventListener("keydown", (event) => {
-            if (event.key === "Escape" && lightbox.classList.contains("show")) {
-                closeLightbox();
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            (event) => {
+
+                if (
+                    event.key === "Escape" &&
+                    lightbox.classList.contains(
+                        "show"
+                    )
+                ) {
+
+                    closeLightbox();
+
+                }
+
             }
-        });
+        );
 
 
         /* =========================================================
            IMAGE ERROR HANDLER
-           اگر یک screenshot وجود نداشت،
-           به‌جای خراب شدن ظاهر، آن کارت مخفی می‌شود.
            ========================================================= */
 
         document
-            .querySelectorAll(".screenshot img")
+            .querySelectorAll(
+                ".screenshot img"
+            )
             .forEach(
                 (image) => {
 
@@ -2594,6 +3125,69 @@
 
                 }
             );
+
+
+        /* =========================================================
+           APK FILE CHECK
+           اگر فایل APK پیدا نشود، به کاربر اطلاع می‌دهد.
+           ========================================================= */
+
+        downloadButton.addEventListener(
+            "click",
+            async (event) => {
+
+                try {
+
+                    const response =
+                        await fetch(
+                            "./HM.APK",
+                            {
+                                method: "HEAD",
+                                cache: "no-store"
+                            }
+                        );
+
+
+                    if (!response.ok) {
+
+                        event.preventDefault();
+
+                        toast.textContent =
+                            "فایل HM.APK روی سایت پیدا نشد";
+
+                        toast.classList.add(
+                            "show"
+                        );
+
+                        clearTimeout(
+                            toastTimer
+                        );
+
+                        toastTimer =
+                            setTimeout(
+                                () => {
+
+                                    toast.classList.remove(
+                                        "show"
+                                    );
+
+                                },
+                                3000
+                            );
+
+                    }
+
+                } catch (error) {
+
+                    /*
+                     * بعضی سرورها HEAD را محدود می‌کنند.
+                     * در این حالت اجازه می‌دهیم لینک دانلود عادی کار کند.
+                     */
+
+                }
+
+            }
+        );
 
     </script>
 
