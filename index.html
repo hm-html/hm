@@ -23,6 +23,7 @@
     <!-- رنگ مرورگر موبایل -->
     <meta name="theme-color" content="#0d1117">
 
+    <!-- تصویر اصلی - نام فایل دست‌نخورده باقی مانده -->
     <link
         rel="preload"
         as="image"
@@ -188,7 +189,9 @@
             top: 0;
             z-index: 1000;
 
-            padding: 12px 0;
+            padding:
+                12px
+                0;
 
             background:
                 color-mix(
@@ -338,6 +341,8 @@
             padding: 28px;
         }
 
+
+        /* دکورهای SVG/گرادیانی پس‌زمینه */
 
         .hero-decoration {
 
@@ -628,7 +633,7 @@
 
 
         /* =========================================================
-           DOWNLOAD BUTTON
+           دکمه دانلود
            ========================================================= */
 
         .download-button {
@@ -932,6 +937,7 @@
            ========================================================= */
 
         .screenshots-section {
+
             margin-top: 18px;
         }
 
@@ -996,7 +1002,9 @@
 
         .comment-form,
         .comment-list {
+
             display: grid;
+
             gap: 10px;
         }
 
@@ -1022,11 +1030,14 @@
 
             padding: 11px 12px;
 
-            background: var(--surface-solid);
+            background:
+                var(--surface-solid);
 
-            color: var(--text);
+            color:
+                var(--text);
 
             font: inherit;
+
             font-size: 11px;
 
             outline: none;
@@ -1052,7 +1063,8 @@
 
             align-items: center;
 
-            justify-content: space-between;
+            justify-content:
+                space-between;
 
             gap: 12px;
         }
@@ -1076,54 +1088,70 @@
 
         .comment-rating label {
 
-            color: var(--text-3);
+            color:
+                var(--text-3);
 
-            cursor: pointer;
+            cursor:
+                pointer;
 
-            font-size: 22px;
+            font-size:
+                22px;
         }
 
         .comment-rating label:hover,
         .comment-rating label:hover ~ label,
         .comment-rating input:checked ~ label {
 
-            color: var(--yellow);
+            color:
+                var(--yellow);
         }
 
         .comment-submit {
 
-            min-height: 42px;
+            min-height:
+                42px;
 
-            padding: 0 18px;
+            padding:
+                0 18px;
 
-            border-radius: 12px;
+            border-radius:
+                12px;
 
-            color: white;
+            color:
+                white;
 
             background:
                 var(--accent);
 
-            font: inherit;
+            font:
+                inherit;
 
-            font-size: 11px;
+            font-size:
+                11px;
 
-            font-weight: 800;
+            font-weight:
+                800;
 
-            cursor: pointer;
+            cursor:
+                pointer;
         }
 
         .comment-list {
-            margin-top: 18px;
+
+            margin-top:
+                18px;
         }
 
         .comment-item {
 
-            padding: 13px;
+            padding:
+                13px;
 
             border:
                 1px solid var(--border);
 
-            border-radius: 14px;
+            border-radius:
+                14px;
 
             background:
                 var(--surface-solid);
@@ -1131,41 +1159,53 @@
 
         .comment-meta {
 
-            display: flex;
+            display:
+                flex;
 
             justify-content:
                 space-between;
 
-            gap: 10px;
+            gap:
+                10px;
 
-            color: var(--text-3);
+            color:
+                var(--text-3);
 
-            font-size: 9px;
+            font-size:
+                9px;
         }
 
         .comment-name {
 
-            color: var(--text);
+            color:
+                var(--text);
 
-            font-weight: 900;
+            font-weight:
+                900;
         }
 
         .comment-stars {
 
-            color: var(--yellow);
+            color:
+                var(--yellow);
 
-            letter-spacing: 1px;
+            letter-spacing:
+                1px;
         }
 
         .comment-body {
 
-            margin-top: 7px;
+            margin-top:
+                7px;
 
-            color: var(--text-2);
+            color:
+                var(--text-2);
 
-            font-size: 10px;
+            font-size:
+                10px;
 
-            line-height: 1.9;
+            line-height:
+                1.9;
         }
 
 
@@ -1175,26 +1215,35 @@
 
         .lightbox {
 
-            position: fixed;
+            position:
+                fixed;
 
-            inset: 0;
+            inset:
+                0;
 
-            z-index: 10000;
+            z-index:
+                10000;
 
-            display: grid;
+            display:
+                grid;
 
-            place-items: center;
+            place-items:
+                center;
 
-            padding: 18px;
+            padding:
+                18px;
 
             background:
                 rgba(3, 5, 10, .88);
 
-            opacity: 0;
+            opacity:
+                0;
 
-            visibility: hidden;
+            visibility:
+                hidden;
 
-            pointer-events: none;
+            pointer-events:
+                none;
 
             transition:
                 opacity .2s ease,
@@ -1203,11 +1252,14 @@
 
         .lightbox.show {
 
-            opacity: 1;
+            opacity:
+                1;
 
-            visibility: visible;
+            visibility:
+                visible;
 
-            pointer-events: auto;
+            pointer-events:
+                auto;
         }
 
         .lightbox-image {
@@ -1218,9 +1270,11 @@
             max-height:
                 calc(100vh - 70px);
 
-            object-fit: contain;
+            object-fit:
+                contain;
 
-            border-radius: 16px;
+            border-radius:
+                16px;
 
             box-shadow:
                 0 20px 70px
@@ -1229,7 +1283,8 @@
 
         .lightbox-close {
 
-            position: absolute;
+            position:
+                absolute;
 
             top:
                 max(14px, env(safe-area-inset-top));
@@ -1237,43 +1292,57 @@
             right:
                 max(14px, env(safe-area-inset-right));
 
-            width: 42px;
-            height: 42px;
+            width:
+                42px;
+
+            height:
+                42px;
 
             border:
-                1px solid rgba(255, 255, 255, .2);
+                1px solid
+                rgba(255, 255, 255, .2);
 
-            border-radius: 50%;
+            border-radius:
+                50%;
 
-            color: white;
+            color:
+                white;
 
             background:
                 rgba(255, 255, 255, .12);
 
-            font-size: 25px;
+            font-size:
+                25px;
 
-            line-height: 1;
+            line-height:
+                1;
 
-            cursor: pointer;
+            cursor:
+                pointer;
         }
 
         .lightbox-caption {
 
-            position: absolute;
+            position:
+                absolute;
 
-            right: 18px;
+            right:
+                18px;
 
             bottom:
                 max(14px, env(safe-area-inset-bottom));
 
-            left: 18px;
+            left:
+                18px;
 
             color:
                 rgba(255, 255, 255, .82);
 
-            text-align: center;
+            text-align:
+                center;
 
-            font-size: 11px;
+            font-size:
+                11px;
         }
 
 
@@ -1283,13 +1352,17 @@
 
         .footer {
 
-            padding: 25px 0 5px;
+            padding:
+                25px 0 5px;
 
-            text-align: center;
+            text-align:
+                center;
 
-            color: var(--text-3);
+            color:
+                var(--text-3);
 
-            font-size: 9px;
+            font-size:
+                9px;
         }
 
 
@@ -1299,27 +1372,38 @@
 
         .toast {
 
-            position: fixed;
+            position:
+                fixed;
 
-            left: 50%;
-            bottom: 20px;
+            left:
+                50%;
+
+            bottom:
+                20px;
 
             transform:
                 translate(-50%, 20px);
 
-            opacity: 0;
+            opacity:
+                0;
 
-            pointer-events: none;
+            pointer-events:
+                none;
 
-            display: flex;
+            display:
+                flex;
 
-            align-items: center;
+            align-items:
+                center;
 
-            gap: 7px;
+            gap:
+                7px;
 
-            padding: 10px 14px;
+            padding:
+                10px 14px;
 
-            border-radius: 12px;
+            border-radius:
+                12px;
 
             background:
                 var(--surface-solid);
@@ -1333,18 +1417,23 @@
             color:
                 var(--text);
 
-            font-size: 10px;
+            font-size:
+                10px;
 
-            font-weight: 800;
+            font-weight:
+                800;
 
-            transition: .3s ease;
+            transition:
+                .3s ease;
 
-            z-index: 9999;
+            z-index:
+                9999;
         }
 
         .toast.show {
 
-            opacity: 1;
+            opacity:
+                1;
 
             transform:
                 translate(-50%, 0);
@@ -1352,8 +1441,11 @@
 
         .toast svg {
 
-            width: 15px;
-            height: 15px;
+            width:
+                15px;
+
+            height:
+                15px;
 
             color:
                 var(--green);
@@ -1372,14 +1464,17 @@
             }
 
             main {
-                padding-top: 12px;
+                padding-top:
+                    12px;
             }
 
             .hero-card {
 
-                padding: 18px;
+                padding:
+                    18px;
 
-                border-radius: 23px;
+                border-radius:
+                    23px;
             }
 
             .app-header {
@@ -1387,7 +1482,8 @@
                 grid-template-columns:
                     78px 1fr;
 
-                gap: 14px;
+                gap:
+                    14px;
 
                 align-items:
                     start;
@@ -1395,87 +1491,114 @@
 
             .app-icon {
 
-                width: 78px;
-                height: 78px;
+                width:
+                    78px;
 
-                border-radius: 21px;
+                height:
+                    78px;
+
+                border-radius:
+                    21px;
             }
 
             .app-title {
-                font-size: 21px;
+                font-size:
+                    21px;
             }
 
             .app-developer {
-                font-size: 10px;
+                font-size:
+                    10px;
             }
 
             .rating-line {
 
-                margin-top: 6px;
+                margin-top:
+                    6px;
 
-                gap: 6px;
+                gap:
+                    6px;
             }
 
             .rating-number {
-                font-size: 11px;
+                font-size:
+                    11px;
             }
 
             .stars svg {
 
-                width: 11px;
-                height: 11px;
+                width:
+                    11px;
+
+                height:
+                    11px;
             }
 
             .votes {
-                font-size: 8px;
+                font-size:
+                    8px;
             }
 
             .pill {
-                display: none;
+                display:
+                    none;
             }
 
             .download-panel {
 
-                margin-top: 20px;
+                margin-top:
+                    20px;
 
-                padding: 14px;
+                padding:
+                    14px;
             }
 
             .download-symbol {
 
-                width: 37px;
-                height: 37px;
+                width:
+                    37px;
+
+                height:
+                    37px;
 
                 flex-basis:
                     37px;
             }
 
             .download-title {
-                font-size: 11px;
+                font-size:
+                    11px;
             }
 
             .download-subtitle {
-                font-size: 8px;
+                font-size:
+                    8px;
             }
 
             .file-size {
-                font-size: 8px;
+                font-size:
+                    8px;
             }
 
             .download-button {
 
-                min-height: 50px;
+                min-height:
+                    50px;
 
-                font-size: 12px;
+                font-size:
+                    12px;
 
-                border-radius: 13px;
+                border-radius:
+                    13px;
             }
 
             .quick-stats {
 
-                gap: 7px;
+                gap:
+                    7px;
 
-                margin-top: 12px;
+                margin-top:
+                    12px;
             }
 
             .quick-stat {
@@ -1485,11 +1608,13 @@
             }
 
             .stat-label {
-                font-size: 7px;
+                font-size:
+                    7px;
             }
 
             .stat-value {
-                font-size: 9px;
+                font-size:
+                    9px;
             }
 
             .content-grid {
@@ -1497,30 +1622,37 @@
                 grid-template-columns:
                     1fr;
 
-                gap: 12px;
+                gap:
+                    12px;
             }
 
             .content-card {
 
-                padding: 18px;
+                padding:
+                    18px;
 
-                border-radius: 18px;
+                border-radius:
+                    18px;
             }
 
             .section-title {
-                font-size: 13px;
+                font-size:
+                    13px;
             }
 
             .description {
-                font-size: 10px;
+                font-size:
+                    10px;
             }
 
             .info-item {
-                min-height: 58px;
+                min-height:
+                    58px;
             }
 
             .info-value {
-                font-size: 9px;
+                font-size:
+                    9px;
             }
 
             .screenshots {
@@ -1545,7 +1677,8 @@
             }
 
             .comment-submit {
-                width: 100%;
+                width:
+                    100%;
             }
         }
 
@@ -1557,12 +1690,14 @@
         @media (max-width: 380px) {
 
             .page {
+
                 width:
                     calc(100% - 10px);
             }
 
             .hero-card {
-                padding: 14px;
+                padding:
+                    14px;
             }
 
             .app-header {
@@ -1570,19 +1705,25 @@
                 grid-template-columns:
                     67px 1fr;
 
-                gap: 11px;
+                gap:
+                    11px;
             }
 
             .app-icon {
 
-                width: 67px;
-                height: 67px;
+                width:
+                    67px;
 
-                border-radius: 18px;
+                height:
+                    67px;
+
+                border-radius:
+                    18px;
             }
 
             .app-title {
-                font-size: 18px;
+                font-size:
+                    18px;
             }
 
             .quick-stats {
@@ -1604,7 +1745,8 @@
             }
 
             .lightbox {
-                padding: 10px;
+                padding:
+                    10px;
             }
 
             .lightbox-image {
@@ -1612,7 +1754,8 @@
                 max-height:
                     calc(100vh - 90px);
 
-                border-radius: 11px;
+                border-radius:
+                    11px;
             }
         }
 
@@ -1667,6 +1810,7 @@
                         stroke-linecap="round"
                         stroke-linejoin="round"
                     >
+
                         <rect
                             x="5"
                             y="3"
@@ -1677,6 +1821,7 @@
 
                         <path d="M9 7h6" />
                         <path d="M9 17h6" />
+
                     </svg>
 
                 </div>
@@ -1685,6 +1830,8 @@
 
             </div>
 
+
+            <!-- دکمه تغییر حالت -->
 
             <button
                 class="theme-button"
@@ -1702,10 +1849,12 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                 >
+
                     <path
                         d="M21 12.8A8.5 8.5 0 0 1 11.2 3
                            6.9 6.9 0 1 0 21 12.8Z"
                     />
+
                 </svg>
 
 
@@ -1718,7 +1867,12 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                 >
-                    <circle cx="12" cy="12" r="4" />
+
+                    <circle
+                        cx="12"
+                        cy="12"
+                        r="4"
+                    />
 
                     <path d="M12 2v2" />
                     <path d="M12 20v2" />
@@ -1728,6 +1882,7 @@
                     <path d="M20 12h2" />
                     <path d="m6.34 17.66-1.41 1.41" />
                     <path d="m19.07 4.93-1.41 1.41" />
+
                 </svg>
 
             </button>
@@ -1764,6 +1919,8 @@
                     <!-- APP ICON -->
 
                     <div class="app-icon">
+
+                        <!-- نام فایل اصلی حفظ شده -->
 
                         <img
                             src="photo_5870748148337152475_y.jpg"
@@ -1804,7 +1961,7 @@
                                 </svg>
 
                                 <svg viewBox="0 0 24 24">
-                                    <path d="M12 2.5l2.95 5.98 6.6.96-4.78 4.66 1.13 6.57L12 17.56l-5.9 3.11 1.13-6.57-4.78-4.66 6.6-.96L12 2.5z"/>
+                                    <path d="M12 2.5l2.95 5.98 6.6.96-4.78 4.66 1.13 6.57L12 17.56l-5.9 3.11-4.78-4.66-6.57 1.13L12 17.56l-5.9 3.11 1.13-6.57-4.78-4.66 6.6-.96L12 2.5z"/>
                                 </svg>
 
                                 <svg viewBox="0 0 24 24">
@@ -1851,7 +2008,9 @@
                 </div>
 
 
-                <!-- DOWNLOAD PANEL -->
+                <!-- =================================================
+                     DOWNLOAD PANEL
+                     ================================================= -->
 
                 <div class="download-panel">
 
@@ -1870,9 +2029,11 @@
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                 >
+
                                     <path d="M12 3v12" />
                                     <path d="m7 10 5 5 5-5" />
                                     <path d="M5 21h14" />
+
                                 </svg>
 
                             </div>
@@ -1901,13 +2062,13 @@
 
 
                     <!-- =================================================
-                         لینک واقعی APK
-                         فایل HM.APK باید دقیقاً کنار index.html باشد.
+                         لینک صحیح فایل APK
+                         نام واقعی فایل در GitHub: HM.apk
                          ================================================= -->
 
                     <a
-                        href="./HM.APK"
-                        download="HM.APK"
+                        href="./HM.apk"
+                        download="HM.apk"
                         type="application/vnd.android.package-archive"
                         class="download-button"
                         id="downloadButton"
@@ -1922,9 +2083,11 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                         >
+
                             <path d="M12 3v12" />
                             <path d="m7 10 5 5 5-5" />
                             <path d="M5 21h14" />
+
                         </svg>
 
                         دانلود و نصب برنامه
@@ -1934,9 +2097,12 @@
                 </div>
 
 
-                <!-- QUICK STATS -->
+                <!-- =================================================
+                     QUICK STATS
+                     ================================================= -->
 
                 <div class="quick-stats">
+
 
                     <div class="quick-stat">
 
@@ -2001,6 +2167,8 @@
             <div class="content-grid">
 
 
+                <!-- ABOUT -->
+
                 <section class="content-card">
 
                     <h2 class="section-title">
@@ -2024,6 +2192,8 @@
 
                 </section>
 
+
+                <!-- CHANGELOG -->
 
                 <section class="content-card">
 
@@ -2075,6 +2245,8 @@
                 <div class="info-list">
 
 
+                    <!-- سیستم‌عامل -->
+
                     <div class="info-item">
 
                         <div class="info-icon">
@@ -2087,6 +2259,7 @@
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                             >
+
                                 <rect
                                     x="5"
                                     y="2"
@@ -2096,6 +2269,7 @@
                                 />
 
                                 <path d="M9 18h6" />
+
                             </svg>
 
                         </div>
@@ -2116,6 +2290,8 @@
                     </div>
 
 
+                    <!-- نسخه -->
+
                     <div class="info-item">
 
                         <div class="info-icon">
@@ -2128,12 +2304,29 @@
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                             >
+
                                 <path d="M4 6h16" />
                                 <path d="M4 12h16" />
                                 <path d="M4 18h16" />
-                                <circle cx="9" cy="6" r="1" />
-                                <circle cx="14" cy="12" r="1" />
-                                <circle cx="10" cy="18" r="1" />
+
+                                <circle
+                                    cx="9"
+                                    cy="6"
+                                    r="1"
+                                />
+
+                                <circle
+                                    cx="14"
+                                    cy="12"
+                                    r="1"
+                                />
+
+                                <circle
+                                    cx="10"
+                                    cy="18"
+                                    r="1"
+                                />
+
                             </svg>
 
                         </div>
@@ -2154,6 +2347,8 @@
                     </div>
 
 
+                    <!-- حجم -->
+
                     <div class="info-item">
 
                         <div class="info-icon">
@@ -2166,9 +2361,11 @@
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                             >
+
                                 <path d="M4 7h16" />
                                 <path d="M6 7v13h12V7" />
                                 <path d="M9 4h6" />
+
                             </svg>
 
                         </div>
@@ -2189,6 +2386,8 @@
                     </div>
 
 
+                    <!-- آخرین بروزرسانی -->
+
                     <div class="info-item">
 
                         <div class="info-icon">
@@ -2201,9 +2400,15 @@
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                             >
-                                <circle cx="12" cy="12" r="9" />
+
+                                <circle
+                                    cx="12"
+                                    cy="12"
+                                    r="9"
+                                />
 
                                 <path d="M12 7v5l3 2" />
+
                             </svg>
 
                         </div>
@@ -2224,6 +2429,8 @@
                     </div>
 
 
+                    <!-- نوع فایل -->
+
                     <div class="info-item">
 
                         <div class="info-icon">
@@ -2236,10 +2443,12 @@
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                             >
+
                                 <path d="M6 3h9l4 4v14H6z" />
                                 <path d="M14 3v5h5" />
                                 <path d="M9 13h6" />
                                 <path d="M9 17h4" />
+
                             </svg>
 
                         </div>
@@ -2260,6 +2469,8 @@
                     </div>
 
 
+                    <!-- نصب -->
+
                     <div class="info-item">
 
                         <div class="info-icon">
@@ -2272,9 +2483,11 @@
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                             >
+
                                 <path d="M12 3v12" />
                                 <path d="m7 10 5 5 5-5" />
                                 <path d="M5 21h14" />
+
                             </svg>
 
                         </div>
@@ -2364,6 +2577,7 @@
                                 ★
                             </label>
 
+
                             <input
                                 id="star4"
                                 name="rating"
@@ -2377,6 +2591,7 @@
                             >
                                 ★
                             </label>
+
 
                             <input
                                 id="star3"
@@ -2392,6 +2607,7 @@
                                 ★
                             </label>
 
+
                             <input
                                 id="star2"
                                 name="rating"
@@ -2405,6 +2621,7 @@
                             >
                                 ★
                             </label>
+
 
                             <input
                                 id="star1"
@@ -2589,7 +2806,9 @@
             stroke-linecap="round"
             stroke-linejoin="round"
         >
+
             <path d="M20 6 9 17l-5-5" />
+
         </svg>
 
         دانلود شروع شد...
@@ -2618,11 +2837,13 @@
             ×
         </button>
 
+
         <img
             class="lightbox-image"
             id="lightboxImage"
             alt=""
         >
+
 
         <div
             class="lightbox-caption"
@@ -2642,10 +2863,14 @@
            THEME SYSTEM
            ========================================================= */
 
-        const html = document.documentElement;
+        const html =
+            document.documentElement;
+
 
         const themeButton =
-            document.getElementById("themeButton");
+            document.getElementById(
+                "themeButton"
+            );
 
 
         const savedTheme =
@@ -2675,6 +2900,7 @@
                 window.matchMedia(
                     "(prefers-color-scheme: dark)"
                 ).matches;
+
 
             if (prefersDark) {
 
@@ -2737,6 +2963,7 @@
                 "downloadButton"
             );
 
+
         const toast =
             document.getElementById(
                 "toast"
@@ -2752,6 +2979,7 @@
 
                 toast.textContent =
                     "دانلود شروع شد...";
+
 
                 toast.classList.add(
                     "show"
@@ -2788,10 +3016,12 @@
                 "commentForm"
             );
 
+
         const commentList =
             document.getElementById(
                 "commentList"
             );
+
 
         const commentStorageKey =
             "hm-app-comments";
@@ -2821,29 +3051,41 @@
 
 
         const escapeHtml =
-            (value) => value.replace(
-                /[&<>'"]/g,
-                (character) => ({
+            (value) =>
+                String(value).replace(
+                    /[&<>'"]/g,
+                    (character) => ({
 
-                    "&": "&amp;",
-                    "<": "&lt;",
-                    ">": "&gt;",
-                    "'": "&#039;",
-                    '"': "&quot;"
+                        "&": "&amp;",
+                        "<": "&lt;",
+                        ">": "&gt;",
+                        "'": "&#039;",
+                        '"': "&quot;"
 
-                }[character])
-            );
+                    }[character])
+                );
 
 
         const renderComments =
             () => {
 
-                const savedComments =
-                    JSON.parse(
-                        localStorage.getItem(
-                            commentStorageKey
-                        ) || "[]"
-                    );
+                let savedComments = [];
+
+
+                try {
+
+                    savedComments =
+                        JSON.parse(
+                            localStorage.getItem(
+                                commentStorageKey
+                            ) || "[]"
+                        );
+
+                } catch (error) {
+
+                    savedComments = [];
+
+                }
 
 
                 const comments =
@@ -2865,8 +3107,12 @@
                                     </span>
 
                                     <span class="comment-stars">
-                                        ${"★".repeat(comment.rating)}
-                                        ${"☆".repeat(5 - comment.rating)}
+                                        ${"★".repeat(
+                                            Number(comment.rating) || 0
+                                        )}
+                                        ${"☆".repeat(
+                                            5 - (Number(comment.rating) || 0)
+                                        )}
                                     </span>
 
                                 </div>
@@ -2890,12 +3136,23 @@
                 event.preventDefault();
 
 
-                const comments =
-                    JSON.parse(
-                        localStorage.getItem(
-                            commentStorageKey
-                        ) || "[]"
-                    );
+                let comments = [];
+
+
+                try {
+
+                    comments =
+                        JSON.parse(
+                            localStorage.getItem(
+                                commentStorageKey
+                            ) || "[]"
+                        );
+
+                } catch (error) {
+
+                    comments = [];
+
+                }
 
 
                 const formData =
@@ -2904,30 +3161,47 @@
                     );
 
 
+                const name =
+                    document
+                        .getElementById(
+                            "commentName"
+                        )
+                        .value
+                        .trim();
+
+
+                const text =
+                    document
+                        .getElementById(
+                            "commentText"
+                        )
+                        .value
+                        .trim();
+
+
+                const rating =
+                    Number(
+                        formData.get(
+                            "rating"
+                        )
+                    ) || 5;
+
+
+                if (!name || !text) {
+                    return;
+                }
+
+
                 comments.unshift({
 
                     name:
-                        document
-                            .getElementById(
-                                "commentName"
-                            )
-                            .value
-                            .trim(),
+                        name,
 
                     text:
-                        document
-                            .getElementById(
-                                "commentText"
-                            )
-                            .value
-                            .trim(),
+                        text,
 
                     rating:
-                        Number(
-                            formData.get(
-                                "rating"
-                            )
-                        )
+                        rating
 
                 });
 
@@ -2935,7 +3209,10 @@
                 localStorage.setItem(
                     commentStorageKey,
                     JSON.stringify(
-                        comments.slice(0, 20)
+                        comments.slice(
+                            0,
+                            20
+                        )
                     )
                 );
 
@@ -2947,7 +3224,8 @@
                     .getElementById(
                         "star5"
                     )
-                    .checked = true;
+                    .checked =
+                    true;
 
 
                 renderComments();
@@ -2969,10 +3247,13 @@
 
                 toastTimer =
                     setTimeout(
-                        () =>
+                        () => {
+
                             toast.classList.remove(
                                 "show"
-                            ),
+                            );
+
+                        },
                         2200
                     );
 
@@ -2992,15 +3273,18 @@
                 "lightbox"
             );
 
+
         const lightboxImage =
             document.getElementById(
                 "lightboxImage"
             );
 
+
         const lightboxCaption =
             document.getElementById(
                 "lightboxCaption"
             );
+
 
         const lightboxClose =
             document.getElementById(
@@ -3015,8 +3299,10 @@
                     "show"
                 );
 
+
                 document.body.style.overflow =
                     "";
+
 
                 lightboxImage.removeAttribute(
                     "src"
@@ -3040,15 +3326,19 @@
                                 image.currentSrc ||
                                 image.src;
 
+
                             lightboxImage.alt =
                                 image.alt;
+
 
                             lightboxCaption.textContent =
                                 image.alt;
 
+
                             lightbox.classList.add(
                                 "show"
                             );
+
 
                             document.body.style.overflow =
                                 "hidden";
@@ -3125,69 +3415,6 @@
 
                 }
             );
-
-
-        /* =========================================================
-           APK FILE CHECK
-           اگر فایل APK پیدا نشود، به کاربر اطلاع می‌دهد.
-           ========================================================= */
-
-        downloadButton.addEventListener(
-            "click",
-            async (event) => {
-
-                try {
-
-                    const response =
-                        await fetch(
-                            "./HM.APK",
-                            {
-                                method: "HEAD",
-                                cache: "no-store"
-                            }
-                        );
-
-
-                    if (!response.ok) {
-
-                        event.preventDefault();
-
-                        toast.textContent =
-                            "فایل HM.APK روی سایت پیدا نشد";
-
-                        toast.classList.add(
-                            "show"
-                        );
-
-                        clearTimeout(
-                            toastTimer
-                        );
-
-                        toastTimer =
-                            setTimeout(
-                                () => {
-
-                                    toast.classList.remove(
-                                        "show"
-                                    );
-
-                                },
-                                3000
-                            );
-
-                    }
-
-                } catch (error) {
-
-                    /*
-                     * بعضی سرورها HEAD را محدود می‌کنند.
-                     * در این حالت اجازه می‌دهیم لینک دانلود عادی کار کند.
-                     */
-
-                }
-
-            }
-        );
 
     </script>
 
